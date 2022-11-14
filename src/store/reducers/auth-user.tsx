@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import notify from "@utils/toast";
+
 import axios from "axios";
 import { closeAuthPopup } from "./auth-reducer";
 
@@ -62,7 +62,7 @@ export const authSlice = createSlice({
       window.localStorage.setItem("access_token", user.access_token);
       window.localStorage.setItem("refresh_token", user.refresh_token);
       if (!state.isUserLoggedIn) {
-        notify("Successfully Logged in", "success");
+        
       }
     },
     updateUserObject: (state, action) => {
@@ -70,7 +70,7 @@ export const authSlice = createSlice({
     },
     logout: (state) => {
       if (state.isUserLoggedIn) {
-        notify("Successfully Logged out", "warning");
+        
       }
       window.localStorage.removeItem("loggedInUser");
       window.localStorage.removeItem("access_token");
