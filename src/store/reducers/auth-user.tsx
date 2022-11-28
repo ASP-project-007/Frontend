@@ -1,8 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import axios from "axios";
-import { closeAuthPopup } from "./auth-reducer";
-
 const DEFAULT_USER_OBJECT = {
   firstName: "",
   lastName: "",
@@ -19,6 +16,10 @@ const DEFAULT_USER_OBJECT = {
   refreshToken: "",
   id: 0,
   tab: 0
+};
+
+const storeItems = {
+  
 };
 
 const initialState = {

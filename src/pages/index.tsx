@@ -1,14 +1,31 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
 import 'antd/dist/antd.css';
+import { Menu, Button  } from 'antd'
+import React from 'react';
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">About</Link>
-    </p>
-  </Layout>
-)
 
-export default IndexPage
+export default class IndexPage extends React.Component {
+
+  render (): React.ReactNode {
+    return(
+      <div title="Home">
+        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+          <Menu.Item><a href="/">Home</a></Menu.Item>
+          <Menu.Item><a href="/product">Product</a></Menu.Item>
+          <Menu.Item><a href="/cart">Cart</a></Menu.Item>
+        </Menu>
+        <img src='https://images5.alphacoders.com/311/311171.jpg' />
+        <Button
+          type='primary'
+          style={{
+            zIndex: 1,
+            bottom: 300,
+            fontFamily: 'Open Sans Condensed, sans-serif'
+          }}
+          block
+        >
+          <a href="/product">welcome</a>
+        </Button>
+      </div>
+    )
+  }
+}
