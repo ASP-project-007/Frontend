@@ -1,0 +1,48 @@
+{
+    "categoriesList": [{
+        "name": "Electronic",
+        "option": [{
+            "name": "Segway"
+        }, {
+            "name": "Hiboyr"
+        }, {
+            "name": "Ninebot"
+        }]
+    }, {
+        "name": "Beauty Product",
+        "option": [{
+            "name": "Shampoo"
+        }, {
+            "name": "Brush"
+        }, {
+            "name": "Masks"
+        }]
+    }, {
+        "name": "Self Help",
+        "option": [{
+            "name": "Something More!: Essential Attitudes for Building the Life You Want "
+        }, {
+            "name": "The Legacy of Love: A Journey of Self-Mastery"
+        }, {
+            "name": "Purge Yourself - The Breakup Recovery Guide to Letting Go of Yourself"
+        }]
+    }, {
+        "name": "Furniture",
+        "option": [{
+            "name": "Chair"
+        }, {
+            "name": "Desk"
+        }, {
+            "name": "Table"
+        }]
+    }, {
+        "name": "Computer",
+        "option": [{
+            "name": "DELL"
+        }, {
+            "name": "Samsung"
+        }, {
+            "name": "WX"
+        }]
+    }]
+}

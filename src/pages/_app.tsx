@@ -6,8 +6,6 @@ import "tailwindcss/tailwind.css";
 import "../styles/globals.css";
 import "react-spring-bottom-sheet/dist/style.css";
 import { Hydrate, QueryClient, QueryClientProvider } from "react-query";
-import { useRouter } from "next/router";
-import Script from 'next/script';
 import store from "@store/.";
 import {
   Backdrop,
@@ -17,13 +15,6 @@ import {
 } from "@material-ui/core";
 import theme from "@themes/default-theme";
 // import Authentication from "@components/Auth/Authentication";
-
-import { BackdropProvider } from "contexts/backdrop/backdrop.provider";
-import { SnackBarProvider } from "contexts/snackbar/snackbar.provider";
-import NextNProgress from "nextjs-progressbar";
-// import AuthState from "@components/AuthState";
-
-
 
 
 function MyApp({ Component, pageProps }: AppProps) {

@@ -1,7 +1,5 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import type { AppState, AppThunk } from "..";
-
 export enum FormType {
   LOGIN = "LOGIN",
   SIGNUP = "SIGNUP",
