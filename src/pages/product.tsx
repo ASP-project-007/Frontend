@@ -71,6 +71,11 @@ class ProductPage extends React.Component {
         return {
           key: `sub${key}`,
           label: `${item[index].name}`,
+          style: {
+            border: 'solid',
+            borderColor: 'rgb(220,220,220,0.5)',
+            borderWidth: '1px'
+          },
     
           children: item[index].option.map((_, j, childrenItem) => {
             return {
@@ -91,11 +96,10 @@ class ProductPage extends React.Component {
       <Layout style={{ height: '100%'}}>
         <Header style={{
           ...style,
-          backgroundColor: 'white'
         }}>
         <div className='header-left'>
           <div className='logo' style={style}>
-            <a href="/">OfferCart</a>
+            <a href="/" style={{ color: "white" }}>OfferCart</a>
           </div>
           <div className='location' style={style}>
               <EnvironmentOutlined />{/*location*/}
@@ -124,7 +128,11 @@ class ProductPage extends React.Component {
           </div>
         </div>
       </Header>
-      <Content style={{ padding: '0 50px' }}>
+      <Content style={{
+          padding: '0 50px',
+          background: 'rgb(244, 244, 244)'
+        }}
+      >
         <Breadcrumb
           style={{ margin: '16px 0' }}
           itemRender={()=>{}}
@@ -144,34 +152,38 @@ class ProductPage extends React.Component {
               defaultOpenKeys={['sub1']}
               style={{
                 height: '100%',
-                background: '#F4F4F4'
+                background: '#F4F4F4',
               }}
               items={menuItem}
               onSelect={()=>this.changeCategories}
             />
-            <div className='Filters'>Filters
-              <div className='color'></div>
-              <div className='SaleOff'>Price
-                  <Slider defaultValue={30} />
-              </div>
-            </div>
           </Sider>
           <Content
               style={{
                   padding: '0 24px',
                   minHeight: 280 ,
-                  backgroundColor: 'white'
+                  background: 'rgb(244, 244, 244)'
               }}>
               {testGoodList.goodlist.map((items) => {
                   return(
                     <a href='/cart'>
                       <Card
+                        bordered
                         hoverable
                         style={{
                           width: 240,
                           display: 'inline-block',
+                          marginLeft: '2%',
+                          marginBottom: '1%',
                         }}
-                        cover={<img src={items.image} />}
+                        cover={
+                          <div style={{height: 300,}}>
+                          <img
+                            style={{}} 
+                            src={items.image}
+                          />
+                          </div>
+                        }
                       >
                         <Meta title={items.name} description={`SaleOff:${items.saleOff}\nI\ Shop:${items.shop}`} />
                         <ShoppingCartOutlined />
@@ -183,6 +195,8 @@ class ProductPage extends React.Component {
                 defaultCurrent={1}
                 total={TOTAL_PAGE}
                 style={{
+                  marginTop: '3%',
+                  marginBottom: '3%',
                   textAlign: 'center',
                 }}
                 onChange={()=>this.changePage}
