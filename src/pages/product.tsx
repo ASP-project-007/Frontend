@@ -1,6 +1,6 @@
 import React from 'react';
 import type { MenuProps } from 'antd';
-import { Pagination, Breadcrumb, Input, Layout, Menu, Slider } from 'antd';
+import { Pagination, Breadcrumb, Input, Layout, Menu, Slider, Card  } from 'antd';
 import { BellOutlined, EnvironmentOutlined, ShoppingCartOutlined, UserOutlined } from '@ant-design/icons';
 import 'antd/dist/antd.css';
 import { SearchItems, GetCategories, UpdateItems, GetLocation } from './api/users';
@@ -9,6 +9,7 @@ import testcategories from './users/Categories.json';
 
 const { Header, Content, Sider } = Layout;
 const { Search } = Input;
+const { Meta } = Card;
 
 type StateType = {
   goodList: object,
@@ -44,26 +45,26 @@ class ProductPage extends React.Component {
   async changeCategories({key}) {
     const goodList = await UpdateItems(key);
     // once API work, use setState
-    // this.setState({
-    //   goodList: goodList,
-    // });
+    this.setState({
+      goodList: goodList,
+    });
   }
 
   async changePage(page: number, pageSize: number) {
     let goodList = await UpdateItems(page)
     // once API work, use setState
-    // this.setState({goodList})
+    this.setState({goodList})
   }
   
   async onSearch (value: string) {
     let goodList = await SearchItems(value);
     // once API work, use setState
-    // this.setState({goodList})
+    this.setState({goodList})
   }
   
 
   render (): React.ReactNode {
-    // const { categories, location, goodList }  = this.state
+    const { categories, location, goodList }  = this.state
     const menuItem: MenuProps['items'] = testcategories.categoriesList.map( // testcategories => categories
       (_, index, item) => {
         const key = String(index + 1);
@@ -107,7 +108,7 @@ class ProductPage extends React.Component {
           }}>
             <Search
                 placeholder="input search text"
-                onSearch={this.onSearch}
+                onSearch={()=>this.onSearch}
                 style={{
                     padding: '8%',       
                 }}
@@ -146,7 +147,7 @@ class ProductPage extends React.Component {
                 background: '#F4F4F4'
               }}
               items={menuItem}
-              onSelect={this.changeCategories}
+              onSelect={()=>this.changeCategories}
             />
             <div className='Filters'>Filters
               <div className='color'></div>
@@ -163,26 +164,19 @@ class ProductPage extends React.Component {
               }}>
               {testGoodList.goodlist.map((items) => {
                   return(
-                    <div
-                      style={{
-                        marginTop: '10px',
-                        padding: '5px',
-                        width: '30%',
-                        height: '40%',
-                        display: 'inline-block',
-                      }}
-                    >
-                      <div style={{
-                        width: '100%',
-                        height: '100%',
-                        backgroundImage: `url(${items.image})`,
-                        backgroundSize: '100% 100%',
-                      }} />
-                      <h1>Name: {items.name}</h1>
-                      <h1>Sale Off: {items.saleOff}</h1>
-                      <h1>Shop: {items.shop}</h1>
-                      <ShoppingCartOutlined />
-                    </div>
+                    <a href='/cart'>
+                      <Card
+                        hoverable
+                        style={{
+                          width: 240,
+                          display: 'inline-block',
+                        }}
+                        cover={<img src={items.image} />}
+                      >
+                        <Meta title={items.name} description={`SaleOff:${items.saleOff}\nI\ Shop:${items.shop}`} />
+                        <ShoppingCartOutlined />
+                      </Card>
+                    </a>
                   )
               })}
               <Pagination
@@ -191,7 +185,7 @@ class ProductPage extends React.Component {
                 style={{
                   textAlign: 'center',
                 }}
-                onChange={this.changePage}
+                onChange={()=>this.changePage}
               />
           </Content>
         </Layout>

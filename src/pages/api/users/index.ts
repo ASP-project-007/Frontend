@@ -21,12 +21,27 @@ const handler = (_req: NextApiRequest, res: NextApiResponse) => {
 
 export default handler
 
-export const SearchItems = async (value: string) => {
+export const addProductToCart =async (product:string) => {
+  try {
+    const res = await axios({
+      method: 'post',
+      url: '/simple/addProductToCart',
+      params: {
+        name: product
+      }
+    })
+    return res;
+  } catch (error: any){
+    console.log(error)
+  }
+}
+
+export const SearchItems = async (searchItem: string) => {
   try {
     const res = await axios({
       method: 'post',
       url: '/simple/search',
-      params: value
+      params: {searchItem}
     })
   } catch (error: any){
     console.log(error)
@@ -55,6 +70,20 @@ export const GetLocation = async () => {
       url: 'sample/getLocation',
     })
   } catch (error: any) {
+    console.log(error)
+  }
+}
+
+export const GetProductInfo = async(name: string) => {
+  try {
+    const res = await axios({
+      method: 'get',
+      url: 'sample/getProductInfo',
+      params: {
+        name: name,
+      }
+    })
+  } catch(error: any) {
     console.log(error)
   }
 }

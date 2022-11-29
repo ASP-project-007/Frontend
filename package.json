@@ -29,6 +29,7 @@
     "framer-motion": "^5.0.0",
     "git": "^0.1.5",
     "i": "^0.3.7",
+    "ionic-angular": "^3.9.10",
     "keen-slider": "^5.5.1",
     "moment": "^2.29.1",
     "next": "latest",
