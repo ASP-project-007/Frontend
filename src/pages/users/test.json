@@ -4,36 +4,42 @@
         "name": "Chair",
         "saleOff": "10%",
         "shop": "Costco",
-        "image": "https://www.bing.com/th?id=OIP.v3kUAinqtvVHkg6b4AWwNAHaIZ&w=234&h=266&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2"
+        "image": "https://www.bing.com/th?id=OIP.v3kUAinqtvVHkg6b4AWwNAHaIZ&w=234&h=266&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2",
+        "amout": 1
     },
     {
         "name": "Chair",
         "saleOff": "20%",
         "shop": "Costco",
-        "image": "https://www.bing.com/th?id=OIP.W2-9ip9b_oS5qvKAY9C6ZgHaKA&w=215&h=290&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2"
+        "image": "https://www.bing.com/th?id=OIP.W2-9ip9b_oS5qvKAY9C6ZgHaKA&w=215&h=290&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2",
+        "amout": 1
     },
     { 
         "name": "Chair",
         "saleOff": "30%",
         "shop": "Costco",
-        "image": "https://www.bing.com/th?id=OIP.jQ-S53fjIIIyTEmx5YAj1QHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2"
+        "image": "https://www.bing.com/th?id=OIP.jQ-S53fjIIIyTEmx5YAj1QHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2",
+        "amout": 1
     },
     {
         "name": "Chair",
         "saleOff": "40%",
         "shop": "Costco",
-        "image": "https://www.bing.com/th?id=OIP.i37Se26At3eq4UlXo07prAHaKr&w=208&h=300&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2"
+        "image": "https://www.bing.com/th?id=OIP.i37Se26At3eq4UlXo07prAHaKr&w=208&h=300&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2",
+        "amout": 1
     },
     {
         "name": "Chair",
         "saleOff": "50%",
         "shop": "Costco",
-        "image": "https://www.bing.com/th?id=OIP.saJShJqB6NwtwREfzkl5wAHaJS&w=223&h=280&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2"
+        "image": "https://www.bing.com/th?id=OIP.saJShJqB6NwtwREfzkl5wAHaJS&w=223&h=280&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2",
+        "amout": 1
     },
     {
         "name": "Chair",
         "saleOff": "60%",
         "shop": "Costco",
-        "image": "https://www.bing.com/th?id=OIP.zJ81XLheIUFF_a-LtzKKUwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2"
+        "image": "https://www.bing.com/th?id=OIP.zJ81XLheIUFF_a-LtzKKUwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.6&pid=3.1&rm=2",
+        "amout": 1
     }
 ]}

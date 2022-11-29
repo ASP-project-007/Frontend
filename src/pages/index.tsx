@@ -5,8 +5,14 @@ import React from 'react';
 export default class IndexPage extends React.Component {
   render (): React.ReactNode {
     return(
-      <div title="Home">
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+      <div
+        title="Home"
+      >
+        <Menu
+          theme="dark"
+          mode="horizontal"
+          defaultSelectedKeys={['2']}
+        >
           <Menu.Item><a href="/">Home</a></Menu.Item>
           <Menu.Item><a href="/product">Product</a></Menu.Item>
           <Menu.Item><a href="/cart">Cart</a></Menu.Item>
@@ -17,7 +23,8 @@ export default class IndexPage extends React.Component {
           style={{
             zIndex: 1,
             bottom: 300,
-            fontFamily: 'Open Sans Condensed, sans-serif'
+            fontFamily: 'Open Sans Condensed, sans-serif',
+            backgroundColor: 'rgba(200,200,200,0.4)'
           }}
           block
         >
