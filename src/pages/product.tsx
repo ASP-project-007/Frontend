@@ -45,26 +45,26 @@ class ProductPage extends React.Component {
   async changeCategories({key}) {
     const goodList = await UpdateItems(key);
     // once API work, use setState
-    // this.setState({
-    //   goodList: goodList,
-    // });
+    this.setState({
+      goodList: goodList,
+    });
   }
 
   async changePage(page: number, pageSize: number) {
     let goodList = await UpdateItems(page)
     // once API work, use setState
-    // this.setState({goodList})
+    this.setState({goodList})
   }
   
   async onSearch (value: string) {
     let goodList = await SearchItems(value);
     // once API work, use setState
-    // this.setState({goodList})
+    this.setState({goodList})
   }
   
 
   render (): React.ReactNode {
-    // const { categories, location, goodList }  = this.state
+    const { categories, location, goodList }  = this.state
     const menuItem: MenuProps['items'] = testcategories.categoriesList.map( // testcategories => categories
       (_, index, item) => {
         const key = String(index + 1);
@@ -108,7 +108,7 @@ class ProductPage extends React.Component {
           }}>
             <Search
                 placeholder="input search text"
-                onSearch={this.onSearch}
+                onSearch={()=>this.onSearch}
                 style={{
                     padding: '8%',       
                 }}
@@ -147,7 +147,7 @@ class ProductPage extends React.Component {
                 background: '#F4F4F4'
               }}
               items={menuItem}
-              onSelect={this.changeCategories}
+              onSelect={()=>this.changeCategories}
             />
             <div className='Filters'>Filters
               <div className='color'></div>
@@ -185,7 +185,7 @@ class ProductPage extends React.Component {
                 style={{
                   textAlign: 'center',
                 }}
-                onChange={this.changePage}
+                onChange={()=>this.changePage}
               />
           </Content>
         </Layout>
