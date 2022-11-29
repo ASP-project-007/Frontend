@@ -2,9 +2,7 @@ import 'antd/dist/antd.css';
 import { Menu, Button  } from 'antd'
 import React from 'react';
 
-
 export default class IndexPage extends React.Component {
-
   render (): React.ReactNode {
     return(
       <div title="Home">
